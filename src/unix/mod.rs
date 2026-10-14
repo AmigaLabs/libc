@@ -2514,6 +2514,9 @@ cfg_if! {
     } else if #[cfg(target_os = "nuttx")] {
         mod nuttx;
         pub use self::nuttx::*;
+    } else if #[cfg(target_os = "amigaos")] {
+        mod amigaos;
+        pub use self::amigaos::*;
     } else {
         // Unknown target_os
     }
