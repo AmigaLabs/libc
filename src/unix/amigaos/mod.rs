@@ -581,7 +581,7 @@ extern "C" {
 
 extern "C" {
     pub fn arc4random_buf(buf: *mut c_void, nbytes: size_t);
-    // Returns a malloc'd "<current dir>/<program name>"; the caller frees it.
+    // Returns the full path of the program, in a static buffer that the next call overwrites.
     pub fn getexecfullname() -> *const c_char;
 }
 
