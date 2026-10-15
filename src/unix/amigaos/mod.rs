@@ -859,3 +859,14 @@ pub const VT0: tcflag_t = 0;
 pub const VT1: tcflag_t = 256;
 pub const VTDLY: tcflag_t = 256;
 pub const XTABS: tcflag_t = 65536;
+
+// d_type values from clib4's dirent.h. They differ from Linux (DT_REG is 1 here,
+// 8 on Linux), so the generic constants are not used on AmigaOS.
+pub const DT_UNKNOWN: u8 = 0xf;
+pub const DT_REG: u8 = 1;
+pub const DT_BLK: u8 = 2;
+pub const DT_CHR: u8 = 3;
+pub const DT_DIR: u8 = 4;
+pub const DT_FIFO: u8 = 5;
+pub const DT_LNK: u8 = 7;
+pub const DT_SOCK: u8 = 8;

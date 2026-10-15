@@ -242,7 +242,8 @@ cfg_if! {
     if #[cfg(all(
         not(any(target_os = "nto", target_os = "qnx")),
         not(target_os = "aix"),
-        not(target_os = "espidf")
+        not(target_os = "espidf"),
+        not(target_os = "amigaos")
     ))] {
         pub const DT_UNKNOWN: u8 = 0;
         pub const DT_FIFO: u8 = 1;
