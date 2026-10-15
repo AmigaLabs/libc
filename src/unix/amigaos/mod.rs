@@ -583,6 +583,7 @@ extern "C" {
     pub fn arc4random_buf(buf: *mut c_void, nbytes: size_t);
     // Returns the full path of the program, in a static buffer that the next call overwrites.
     pub fn getexecfullname() -> *const c_char;
+    pub fn strerror_r(errnum: c_int, buf: *mut c_char, buflen: size_t) -> c_int;
 }
 
 pub const F_DUPFD: c_int = 0;
